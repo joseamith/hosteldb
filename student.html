@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Student Login page</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/static/images/favicon.ico"
+    />
+    <!-- Required meta tags -->
+    
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    
+    <style>
+      body {
+        margin-top: 0px;
+        background: #dcdcdc;
+        background-image: url("./back1.png");
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        background-repeat: no-repeat;
+      }
+
+      /* Header and navigation styles */
+      header {
+        background-color: rgb(30, 30, 30);
+        color: #fff;
+        padding: 20px 0;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .logo {
+        font-size: 24px;
+        font-weight: 600;
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+      }
+
+      .nav-links li {
+        margin-right: 20px;
+      }
+
+      .nav-links a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      /* Login form and container styles */
+      .account-block {
+        padding: 20px;
+        background-image: url("https://t4.ftcdn.net/jpg/02/19/66/93/360_F_219669327_v12pBKc7TB62E3uCJrgRRkDhfVENK3z5.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        position: relative;
+        box-shadow: #282828;
+      }
+
+      .account-block .account-testimonial {
+        text-align: center;
+        color: #fff;
+        position: absolute;
+        padding: 60px;
+        padding-left: 115px;
+      }
+
+      /* Custom text and button styles */
+      .text-theme {
+        color: #5369f8 !important;
+      }
+
+      .btn-theme {
+        background-color: #5369f8;
+        border-color: #5369f8;
+        color: #fff;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header and navigation bar -->
+    <header>
+      <nav>
+        <div class="logo">
+          <h1>HostelDB</h1>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html#features">Services</a></li>
+            <li><a href="contactus.html">Contact</a></li>
+            <li><a href="index.html">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <br />
+    <br />
+    <br />
+    <!-- Main login form and container -->
+    <div id="main-wrapper" class="container">
+      <div class="row justify-content-center">
+        <div class="col-xl-10">
+          <div class="card border-0">
+            <div class="card-body p-0">
+              <div class="row no-gutters">
+                <div class="col-lg-6">
+                  <div class="p-5">
+                    <div class="mb-5">
+                      <h3 class="h4 font-weight-bold text-theme">Login as Student</h3>
+                    </div>
+
+                    <p class="text-muted mt-2 mb-5">
+                      Enter your ID and password to continue.
+                    </p>
+
+                    <!-- Login form -->
+                    <form action="./studentdashboard.html" method="POST">
+                      <div class="form-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="username"
+                          name="username"
+                          placeholder="Enter your Id"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="password"
+                          name="password"
+                          placeholder="Password"
+                        />
+                      </div>
+                      <button type="submit" class="btn btn-theme">Login</button>
+                      <a href="#l" class="forgot-link float-right text-primary"
+                        >Forgot password?</a
+                      >
+                    </form>
+                  </div>
+                </div>
+                
+                <!-- Testimonial or additional content (col-lg-5) -->
+                <div class="col-lg-5 d-none d-lg-inline-block">
+                  <div class="account-block rounded-right">
+                    <div class="overlay rounded-right"></div>
+                    <div class="account-testimonial">
+                      <!-- Testimonial content or other information can be added here -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

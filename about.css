@@ -1,0 +1,86 @@
+/* Reset default margin, padding, and box-sizing behavior for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styling for the whole page background */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  overflow: hidden;
+  background-image: url("./background.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Header styling with navigation */
+header {
+  background-color: rgb(30, 30, 30);
+  color: #fff;
+  padding: 20px 0;
+}
+
+/* Navigation styling */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo styling */
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Styling for the navigation links */
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+/* Styling for individual navigation list items */
+.nav-links li {
+  margin-right: 20px;
+}
+
+/* Styling for navigation links */
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Reset margin for h1 elements */
+h1 {
+  margin: 0;
+}
+
+/* Styling for the main content container */
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 2%;
+}
+
+/* Styling for paragraph text */
+p {
+  line-height: 1.5;
+}
+
+/* Styling for anchor links */
+a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+/* Styling for anchor links on hover */
+a:hover {
+  text-decoration: underline;
+}

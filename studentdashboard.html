@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="studentdashboard.css"/> <!-- Link to an external CSS stylesheet -->
+    <title>Student Dashboard</title> <!-- Title for the webpage -->
+</head>
+<body>
+    <!-- Header section with navigation menu -->
+    <header>
+        <nav>
+          <div class="logo">
+            <h1>HostelDB</h1>
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html#features">Services</a></li>
+            <li><a href="contactus.html">Contact</a></li>
+            <li><a href="index.html">Logout</a></li>
+          </ul>
+        </nav>
+    </header>
+
+    <!-- Page title -->
+    <h1 style="margin: 40px 0px 0px 580px; color: aliceblue; font-size: 40px;">Student Dashboard</h1>
+
+    <!-- Container for cards -->
+    <div class="container">
+        <!-- Card 1: Student Profile -->
+        <div class="card" onclick="goToPage('profile.html')">
+            <div class="card-content">
+                <h2>Student Profile</h2>
+            </div>
+        </div>
+
+        <!-- Card 2: Leave Application -->
+        <div class="card" onclick="goToPage('leaveapplication.html')">
+            <div class="card-content">
+                <h2>Leave Application</h2>
+            </div>
+        </div>
+
+        <!-- Card 3: Fee Payment -->
+        <div class="card" onclick="goToPage('payment.html')">
+            <div class="card-content">
+                <h2>Fee Payment</h2>
+            </div>
+        </div>
+
+        <!-- Card 4: Grievance Form -->
+        <div class="card" onclick="goToPage('grievanceform.html')">
+            <div class="card-content">
+                <h2>Grievance Form</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript function to navigate to different pages -->
+    <script>
+        function goToPage(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>

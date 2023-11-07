@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to the external CSS file for styling -->
+    <link rel="stylesheet" href="admindashboard.css"/>
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+          <div class="logo">
+            <h1>HostelDB</h1>
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html#features">Services</a></li>
+            <li><a href="contactus.html">Contact</a></li>
+            <li><a href="index.html">Logout</a></li>
+          </ul>
+        </nav>
+    </header>
+    <!-- Admin Dashboard Title -->
+    <h1 style="margin: 40px 0px 0px 580px; color: aliceblue;">Admin Dashboard</h1>
+    <!-- Container for Dashboard Cards -->
+    <div class="container">
+        <!-- Dashboard Card for Student Registration -->
+        <div class="card" onclick="goToPage('registration.html')">
+            <div class="card-content">
+                <h2>Student Registration</h2>
+            </div>
+        </div>
+        <!-- Dashboard Card for Room Allocation -->
+        <div class="card" onclick="goToPage('roomallocation.html')">
+            <div class="card-content">
+                <h2>Room Allocation</h2>
+            </div>
+        </div>
+        <!-- Dashboard Card for Leave Status -->
+        <div class="card" onclick="goToPage('leave.html')">
+            <div class="card-content">
+                <h2>Leave Status</h2>
+            </div>
+        </div>
+        <!-- Dashboard Card for Fee Status -->
+        <div class="card" onclick="goToPage('feestatus.html')">
+            <div class="card-content">
+                <h2>Fee Status</h2>
+            </div>
+        </div>
+        <!-- Dashboard Card for Attendance -->
+        <div class="card" onclick="goToPage('attendance.html')">
+            <div class="card-content">
+                <h2>Attendance</h2>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript function to navigate to the specified page URL
+        function goToPage(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hosteller Attendance</title>
+    <!-- Include Bootstrap CSS for styling -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Global styles for the entire page */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("./back2.png");
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        /* Reset default margin and padding for all elements */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Header styles */
+        header {
+            background-color: rgb(30, 30, 30);
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        /* Navigation styles */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Logo styles */
+        .logo {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        /* Navigation links styles */
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        /* Navigation link items styles */
+        .nav-links li {
+            margin-right: 20px;
+        }
+
+        /* Navigation link text styles */
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Table hover effect styles */
+        .table-hover-shadow:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        /* Container styles */
+        .container {
+            background-color: #fff;
+            padding: 2%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>HostelDB</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html#features">Services</a></li>
+            <li><a href="contactus.html">Contact</a></li>
+            <li><a href="index.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Content Section -->
+    <div class="container mt-5">
+        <h2><strong>Hosteller Attendance</strong></h2>
+        <!-- Table for displaying hosteller attendance -->
+        <table class="table table-hover table-striped table-bordered table-hover-shadow">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Room Number</th>
+                    <th>Attendance</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Rahul</td>
+                    <td>101</td>
+                    <td><input type="checkbox" class="attendance-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>George</td>
+                    <td>102</td>
+                    <td><input type="checkbox" class="attendance-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Jose Amith</td>
+                    <td>103</td>
+                    <td><input type="checkbox" class="attendance-checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Gautham Rajesh</td>
+                    <td>104</td>
+                    <td><input type="checkbox" class="attendance-checkbox"></td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- Button to mark attendance -->
+        <button class="btn btn-primary" id="markAttendance">Mark Attendance</button>
+    </div>
+
+    <script>
+        // JavaScript for marking attendance
+        const markAttendanceButton = document.getElementById('markAttendance');
+        const attendanceCheckboxes = document.querySelectorAll('.attendance-checkbox');
+
+        markAttendanceButton.addEventListener('click', function() {
+            attendanceCheckboxes.forEach(checkbox => {
+                // Process the attendance, e.g., send it to the server or store it in a database
+                const name = checkbox.parentElement.parentElement.querySelector('td:first-child').textContent;
+                const isChecked = checkbox.checked;
+                console.log(`Attendance marked for ${name}: ${isChecked ? 'Present' : 'Absent'}`);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+/* Reset default margin, padding, and box-sizing behavior for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style for the entire body of the webpage */
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("./back2.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Style for the header section */
+header {
+  background-color: rgb(30, 30, 30);
+  color: #fff;
+  padding: 20px 0;
+}
+
+/* Style for the navigation menu within the header */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Style for the logo within the navigation menu */
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Style for the navigation links within the menu */
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+/* Style for individual navigation list items */
+.nav-links li {
+  margin-right: 20px;
+}
+
+/* Style for navigation links */
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Style for the main content container */
+.container {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 20px;
+  width: 400px;
+  margin-top: 150px;
+  margin-left: 550px;
+}
+
+/* Style for text input fields */
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* Style for the submit button */
+#submit-button {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin: 5%;
+}
+
+/* Style for error messages (if any) */
+#error-message {
+  color: red;
+}

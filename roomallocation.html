@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Allocation</title>
+
+    <!-- Link to the Bootstrap CSS stylesheet -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+    
+    <!-- Link to the Bootstrap JS library -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Link to the custom CSS file -->
+    <link rel="stylesheet" href="roomallocation.css" />
+</head>
+<body>
+    <header>
+        <nav>
+          <div class="logo">
+            <h1>HostelDB</h1>
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html#features">Services</a></li>
+            <li><a href="contactus.html">Contact</a></li>
+            <li><a href="index.html">Logout</a></li>
+          </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Room Allocation</h2>
+
+        <!-- Registration form -->
+        <form id="registration-form" onsubmit="return validateForm()">
+            <input type="text" id="name" placeholder="Full Name" required>
+            <br>
+            <input type="text" id="username" placeholder="Username" required>
+            <br>
+            <input type="tel" id="room number" placeholder="Room Number" required>
+            <br>
+            <!-- Room Preference Selection -->
+            <label for="room-preference">Room Preference:</label>
+            <select id="room-preference">
+                <option value="single">Single Room</option>
+                <option value="double">Double Room</option>
+                <option value="shared">Shared Room</option>
+            </select>
+            <br>
+            <p id="error-message"></p> <!-- Error message display area -->
+            <button type="submit" id="submit-button">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript function to validate the registration form
+        function validateForm() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            const errorMessage = document.getElementById("error-message");
+
+            // Simple email and phone validation patterns
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            const phonePattern = /^\d{10}$/;
+
+            if (!name || !email || !phone) {
+                errorMessage.innerText = "All fields are required.";
+                return false;
+            } else if (!email.match(emailPattern)) {
+                errorMessage.innerText = "Please enter a valid email address.";
+                return false;
+            } else if (!phone.match(phonePattern)) {
+                errorMessage.innerText = "Please enter a valid 10-digit phone number.";
+                return false;
+            } else {
+                errorMessage.innerText = ""; // Clear any previous error message
+                return true; // Form submission allowed
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile Form</title>
+    <!-- Include Bootstrap CSS for styling -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+      /* Global styling */
+        body {
+  font-family: Arial, sans-serif;
+  background-image: url("./back1.png");
+    background-size:cover;
+    background-position: center;
+    
+}
+/* Header styles */
+header {
+  background-color: rgb(30, 30, 30);
+  color: #fff;
+  padding: 20px 0;
+}
+/* Navigation styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* Logo styles */
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+}
+/* Navigation links styles */
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+/* Navigation link item styles */
+.nav-links li {
+  margin-right: 20px;
+}
+/* Navigation link styles */
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+/* Form container styles */
+.container{
+    background-color: rgb(255, 255, 255);
+    border-radius: 1%;
+    padding: 3%;
+    width:800px;
+    margin-bottom:40px;
+}
+    </style>
+</head>
+<body>
+  <!-- Header Section -->
+    <header>
+        <nav>
+          <div class="logo">
+            <h1>HostelDB</h1>
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html#features">Services</a></li>
+            <li><a href="contactus.html">Contact</a></li>
+            <li><a href="index.html">Logout</a></li>
+          </ul>
+        </nav>
+    </header>
+    <!-- Form Section -->
+    <div class="container mt-5">
+        <h2><strong>Student Profile Form</strong></h2>
+        <form id="studentProfileForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="place">Place:</label>
+                <input type="text" class="form-control" id="place" name="place" required>
+            </div>
+            <div class="form-group">
+                <label for="foodPreference">Food Preference:</label>
+                <select class="form-control" id="foodPreference" name="foodPreference">
+                    <option value="Vegetarian">Vegetarian</option>
+                    <option value="Non-Vegetarian">Non-Vegetarian</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="roomPreference">Room Preference:</label>
+                <input type="text" class="form-control" id="roomPreference" name="roomPreference">
+            </div>
+            <div class="form-group">
+                <label for="transactionId">Transaction ID:</label>
+                <input type="text" class="form-control" id="transactionId" name="transactionId">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn btn-secondary" id="editProfile">Edit Profile</button>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript for form submission and editing
+        const studentProfileForm = document.getElementById('studentProfileForm');
+        const editProfileButton = document.getElementById('editProfile');
+
+        studentProfileForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            // You can process the form data here, e.g., save it to a database
+            alert('Student profile submitted successfully!');
+            editProfileButton.style.display = 'block';
+        });
+
+        editProfileButton.addEventListener('click', function () {
+            studentProfileForm.reset();
+            editProfileButton.style.display = 'none';
+        });
+    </script>
+<!-- Include jQuery and Bootstrap JavaScript for functionality -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

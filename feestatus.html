@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fee Status</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom CSS styles */
+        /* Body styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-image: url("./back2.png");
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Reset some default browser styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Header styles */
+        header {
+            background-color: rgb(30, 30, 30);
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        /* Navigation styles */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Logo styles */
+        .logo {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        /* Navigation links styles */
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        /* Navigation link item styles */
+        .nav-links li {
+            margin-right: 20px;
+        }
+
+        /* Navigation link styles */
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Table styles */
+        .table-hover-shadow:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        /* Container styles */
+        .container {
+            background-color: #fff;
+            padding: 2%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>HostelDB</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html#features">Services</a></li>
+            <li><a href="contactus.html">Contact</a></li>
+            <li><a href="index.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Content Section -->
+    <div class="container mt-5">
+        <h2>Fee Status</h2>
+        <!-- Table to display fee status -->
+        <table class="table table-hover table-striped table-bordered table-hover-shadow">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Hostel Rent</th>
+                    <th>Mess Fee</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Rahul</td>
+                    <td>$500</td>
+                    <td>$200</td>
+                    <td>Paid</td>
+                </tr>
+                <tr>
+                    <td>George</td>
+                    <td>$600</td>
+                    <td>$250</td>
+                    <td>Unpaid</td>
+                </tr>
+                <tr>
+                    <td>Jose</td>
+                    <td>$500</td>
+                    <td>$350</td>
+                    <td>Unpaid</td>
+                </tr>
+                <tr>
+                    <td>Gautham</td>
+                    <td>$550</td>
+                    <td>$400</td>
+                    <td>Unpaid</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

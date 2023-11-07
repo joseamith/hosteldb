@@ -1,0 +1,167 @@
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+header {
+  background-color: rgb(30, 30, 30);
+  color: #fff;
+  padding: 20px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Hero section styles */
+.hero {
+  background-image: url("./background.png");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+  height: 660px;
+  width: 100%;
+}
+
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero h2 {
+  font-size: 50px;
+  font-weight: 600;
+  padding-top: 100px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #e7e7e7;
+  color: #000000;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background-color: #323232;
+}
+
+/* Features section styles */
+button {
+ display: inline-block;
+ border-radius: 4px;
+ background-color: #3d405b;
+ border: none;
+ color: #FFFFFF;
+ text-align: center;
+ font-size: 17px;
+ padding: 16px;
+ width: 130px;
+ transition: all 0.5s;
+ cursor: pointer;
+ margin-top: 10px;
+ margin-bottom: 10px;
+
+
+}
+.b1{
+  margin-left: 620px;
+  margin-right: 10px;
+}
+
+button span {
+ cursor: pointer;
+ display: inline-block;
+ position: relative;
+ transition: 0.5s;
+}
+
+button span:after {
+ content: '»';
+ position: absolute;
+ opacity: 0;
+ top: 0;
+ right: -15px;
+ transition: 0.5s;
+}
+
+button:hover span {
+ padding-right: 15px;
+}
+
+button:hover span:after {
+ opacity: 1;
+ right: 0;
+}
+.features h2{
+  font-size: x-large;
+  text-align: center;
+}
+/* Contact section styles */
+.contact {
+  background-color: #f0f0f0;
+  text-align: center;
+  padding: 80px 0;
+}
+
+.contact h2 {
+  font-size: 36px;
+  font-weight: 600;
+  margin: 20px 0;
+}
+.contact .cta-button{
+  margin-top: 2%;
+  background-color:#a0a0a0 ;
+
+}
+.contact .cta-button:hover {
+  background-color: #323232;
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}

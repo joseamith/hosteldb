@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Application Form</title>
+    <link rel="stylesheet" href="leaveapplication.css">
+</head>
+<body>
+    <header>
+        <nav>
+          <div class="logo">
+            <h1>HostelDB</h1>
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html#features">Services</a></li>
+            <li><a href="contactus.html">Contact</a></li>
+            <li><a href="index.html">Logout</a></li>
+          </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Leave Application Form</h2>
+        <form id="leaveForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+
+            <label for="leaveType">Leave Type:</label>
+            <input type="text" id="leaveType" name="leaveType" required>
+
+            <label for="startDate">Start Date:</label>
+            <input type="text" id="startDate" name="startDate" required>
+
+            <label for="endDate">End Date:</label>
+            <input type="text" id="endDate" name="endDate" required>
+
+            <label for="reason">Reason for Leave:</label>
+            <textarea id="reason" name="reason" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        const leaveForm = document.getElementById('leaveForm');
+
+        leaveForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            // You can add JavaScript code to process the form data here, e.g., send it to a server or save it to a database.
+            alert('Leave application submitted successfully.');
+        });
+    </script>
+</body>
+</html>

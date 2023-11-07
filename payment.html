@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+        /* Set body styles, background image, and reset margin and padding */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("./back2.png");
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+        }
+       
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+header {
+  background-color: rgb(30, 30, 30);
+  color: #fff;
+  padding: 20px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+        /* Container for centering content */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 400px;
+            margin-left: 35%; /* Adjust as needed */
+        }
+
+        /* Styles for the payment box */
+        .payment-box {
+            background-color: #fff;
+            width: 700px;
+            height: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Center-align text in the payment box */
+        .payment-text {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        /* Styles for the payment button */
+        .pay-button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Hover effect for the payment button */
+        .pay-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+          <div class="logo">
+            <h1>HostelDB</h1>
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html#features">Services</a></li>
+            <li><a href="contactus.html">Contact</a></li>
+            <li><a href="index.html">Logout</a></li>
+          </ul>
+        </nav>
+      </header>
+    <div class="container">
+        <div class="payment-box">
+            <!-- Payment information text -->
+            <p class="payment-text">Click on <strong>'Pay Now'</strong> to redirect to the payment page</p>
+            <!-- Payment button with an event listener -->
+            <button class="pay-button" onclick="handlePayment()">Pay Now</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to handle payment
+        function handlePayment() {
+            try {
+                // Create a script element to load Razorpay script
+                const script = document.createElement('script');
+                script.src = 'https://checkout.razorpay.com/v1/checkout.js';
+                script.async = true;
+                script.onload = displayPaymentForm;
+                document.body.appendChild(script);
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
+        // Function to display the payment form
+        function displayPaymentForm() {
+            if (typeof window.Razorpay === 'undefined') {
+                console.log('Razorpay script not loaded');
+                return;
+            }
+
+            // Define payment options
+            const options = {
+                key: 'rzp_test_dsqpBlsd93gkpG',
+                amount: 5000, // Amount in the smallest currency unit (e.g., paise for INR)
+                currency: 'INR',
+                name: 'Fee Payment',
+                description: 'Test payment',
+                handler: (response) => {
+                    if (response.razorpay_payment_id) {
+                        console.log('Payment successful!');
+                        // You can redirect to another page here or perform other actions
+                    } else {
+                        console.log('Payment failed!');
+                    }
+                },
+            };
+
+            // Create a new instance of Razorpay with defined options and open the payment form
+            const rzp = new window.Razorpay(options);
+            rzp.open();
+        }
+    </script>
+</body>
+</html>

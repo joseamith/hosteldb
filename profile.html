@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f4f4f4;
+        }
+        .profile-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .profile-image {
+            max-width: 100%;
+            border-radius: 5px;
+            
+        }
+        .profile-details {
+            padding: 20px;
+        }
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("./back1.png");
+    background-size:cover;
+    background-position: center;
+}
+header {
+  background-color: rgb(30, 30, 30);
+  color: #fff;
+  padding: 20px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+    </style>
+</head>
+<body>
+    <header>
+      <nav>
+        <div class="logo">
+          <h1>HostelDB</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html#features">Services</a></li>
+            <li><a href="contactus.html">Contact</a></li>
+            <li><a href="index.html">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container mt-5 profile-container">
+        <h1 class="text-center"><strong>My Profile</strong> </h1>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="https://img.freepik.com/free-vector/isolated-young-handsome-man-different-poses-white-background-illustration_632498-859.jpg?size=626&ext=jpg&uid=R60399695&ga=GA1.1.1976018007.1697903780&semt=ais" alt="Profile Picture" class="profile-image">
+            </div>
+            <div class="col-md-6 profile-details">
+                <h2>Jose Amith</h2>
+                <p>Email: jose@example.com</p>
+                <p>Phone: 123-456-7890</p>
+                <p>Food preference: Veg</p>
+                <p>Room number: 304</p>
+                <p>Fee Status: Completed</p>
+                <p></p>
+            </div>
+        </div>
+        <a href="./edit.html">
+            <button type="submit" class="btn btn-primary">Edit profile</button>
+        </a>
+    </div>
+
+    <!-- Add Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
